@@ -1,16 +1,13 @@
 #!/bin/bash
 
-SCUTIL=/usr/sbin/scutil
-
-echo -n "What is hostname name? : "
-read host_name
-if [ -z "$host_name" ]; then
+if [ -z "$HOSTNAME" ]; then
   echo "HostName is empty"
   exit 1
 fi
 
-sudo $SCUTIL --set ComputerName $host_name
-sudo $SCUTIL --set HostName $host_name.local
-sudo $SCUTIL --get LocalHostName $host_name
+SCUTIL=/usr/sbin/scutil
+sudo $SCUTIL --set ComputerName $HOSTNAME
+sudo $SCUTIL --set HostName $HOSTNAME.local
+sudo $SCUTIL --get LocalHostName $HOSTNAME
 
 exit 0
