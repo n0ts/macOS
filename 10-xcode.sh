@@ -5,7 +5,7 @@ if [ ! -x "/usr/bin/xcode-select" ]; then
   exit 1
 fi
 
+# NOTE: xcode-select command is no block
 /usr/bin/xcode-select --install
-sudo /usr/bin/xcodebuild -license
 
 exit 0
