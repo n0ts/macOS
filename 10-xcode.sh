@@ -5,6 +5,9 @@ if [ ! -x "/usr/bin/xcode-select" ]; then
   exit 1
 fi
 
+# XCode license agreement
+sudo /usr/bin/xcodebuild -license
+
 # NOTE: xcode-select command is no block
 /usr/bin/xcode-select --install
 
