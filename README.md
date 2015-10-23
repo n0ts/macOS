@@ -8,12 +8,16 @@ Requirements
 
 ### Platforms
 - OS X 10.9 Mavericks
+- OS X 10.10 Yosemite
 
 
 Before Usage
 ----
 
+- [Startup key combinations for Mach](https://support.apple.com/en-ap/HT201255)
+
 1. Clean installing OS X via ONLINE or USB memory. 
+  - Hold 'C' key during startup
   - Erase OS X partation (Rename Macintosh HD volune name)
   - USB Memory 
   - Creating a bootable OS X installer in OS X Mavericks
@@ -47,7 +51,7 @@ $ cd os-x
 $ ./setup.sh
     ```
 
-3. Geneerate GitHub [repo tokens[](https://github.com/settings/tokens) and run boxen
+3. Geneerate GitHub [repo tokens](https://github.com/settings/tokens) and run boxen
     ``` 
 $ export GITHUB_API_TOKEN=[token]
 $ ./20-boxen.sh [--no-fde]
