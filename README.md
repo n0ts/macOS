@@ -9,20 +9,19 @@ Requirements
 ### Platforms
 - OS X 10.9 Mavericks
 - OS X 10.10 Yosemite
+- OS X 10.11 El Capitan
 
 
 Before Usage
 ----
 
-- [Startup key combinations for Mach](https://support.apple.com/en-ap/HT201255)
-
-1. Clean installing OS X via ONLINE or USB memory. 
+1. Clean installing OS X via ONLINE or USB memory.
   - Hold 'C' key during startup
   - Erase OS X partation (Rename Macintosh HD volune name)
   - USB Memory 
-  - Creating a bootable OS X installer in OS X Mavericks
-    (http://support.apple.com/kb/HT5856)
-  -- Show Startup Manager : Option key http://support.apple.com/kb/ht1343
+  - Create bootable OS X installer
+  - [Startup key combinations for Mach](https://support.apple.com/en-ap/HT201255)
+  -- Show Startup Manager : C Key
 
 2. Enable FileVault. [System Preferences - FileVault - Turn On FileVault...]
   Keep the recovery key, Restart it.
@@ -33,6 +32,13 @@ Before Usage
   - Xcode (*required)
   etc...
 
+4. for El Capitan, SIP partially disables. Enter recovery mode(%-R), run bellow command.
+
+    ```
+$ csrutil enable --without debug
+or
+$ csrutil disable
+    ```
 
 Usage
 -----
@@ -51,9 +57,8 @@ $ cd os-x
 $ ./setup.sh
     ```
 
-3. Geneerate GitHub [repo tokens](https://github.com/settings/tokens) and run boxen
+3. Run Boxen
     ``` 
-$ export GITHUB_API_TOKEN=[token]
 $ ./20-boxen.sh [--no-fde]
 ENTER> GitHub account
     ```
@@ -74,10 +79,19 @@ $ boxen [projects...]
 Other Manual Configuration
 -----
 
-## Finder Preferenes
+## System Preferences
+
+### Languages & Region
+- Add Japanese
+
+### Accessibility - Audio
+
+- Flash the screen when an alert sound occurs
+
+### Finder Preferenes
 - Slidebar: FAVORITES [$::boxen_user home directory]
 
-## Set keyboard shortcut
+### Set keyboard shortcut
 
 - Select next source in input menu (*required reboot)
     ```
@@ -91,13 +105,47 @@ Other Manual Configuration
 <img src="images/key_60.jpg">
 <img src="images/key_61.jpg">
 
+  - or copy ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 
 Other Configuration
 -----
 
-  - $HOME/.ssh
-  - Background image
-  - Other 3rd party software
+- $HOME/.ssh
+- Spaces & Background image
+- Dashboard
+- Dropbox
+- Import preferences
+  - com.apple.symbolichotkeys
+  - Alfred 2
+    - [Workflows](https://github.com/zenorocha/alfred-workflows)
+  - 1Password
+  - iStat
+  - Bitorrensync
+  - iTerm 2
+    - Preferences - Load Preferences from a custom folder on URL
+    - ~/Library/Preferences/com.googlecode.iterm2.plist
+- Manual Preferences
+  - Displays
+  - Keychain
+  - Finder
+    - Sidebar: on $HOME and DEVICES my machine
+  - TotalFinder
+    - Dock: all ON
+    - Menus: all ON
+    - Visor: Option + F, Hide on ESC, 0.2 sec
+    - Sidebar: all ON
+  - TotalTerminal
+    - Activation: Option + T
+  - Bartender
+  - Screen Savers
+  - Firefox
+  - Chrome
+  - VMware Fusion
+  - Menu bar icons
+
+- Other 3rd party software
+  - ATOK
 
 
 Authors
