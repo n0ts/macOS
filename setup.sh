@@ -1,12 +1,10 @@
 #!/bin/bash
 
-URL=https://raw.githubusercontent.com/n0ts/os-x/master
-
-scripts=(
+SCIPTS=(
   01-hostname
   10-xcode
 )
-for script in ${scripts[@]}; do
+for script in ${SCRIPTS[@]}; do
   bash ./$script.sh
   if [ "$?" != 0 ]; then
     echo "Failed to run $script.sh"
