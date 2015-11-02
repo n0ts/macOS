@@ -1,28 +1,27 @@
 #!/bin/bash
  
 BOXEN_HOME=/opt/boxen
-OURBOXEN=https://github.com/n0ts/our-boxen.git
+OUR_BOXEN=https://github.com/n0ts/our-boxen.git
 
 sudo mkdir -p $BOXEN_HOME
-sudo chown "$USER":staff $BOXEN_HOME
+sudo chown $(whoami):staff $BOXEN_HOME
 
 cd $BOXEN_HOME
-git clone $OURBOXEN repo
+git clone $OUR_BOXEN repo
 
 #
 # Boxen environment variables
 #
-# - BOXEN_NO_FDE
+# - BOXEN_NO_FDE: $boxen::config::root_encrypted
 # - BOXEN_HOME: /opt/boxen
-# - BOXEN_LOG_FILE: #{repodir}/log/boxen.log
+# - BOXEN_LOG_FILE: ${boxen::config::repodir}/log/boxen.log
 # - BOXEN_PUPPET_DIR: /tmp/boxen/puppet
 # - BOXEN_REPO_DIR: `pwd`
 # - BOXEN_GITHUB_ENTERPRISE_URL: https://github.com
 # - BOXEN_REPO_URL_TEMPLATE: default
-# - BOXEN_SRC_DIR: /Users/#{user}/src
+# - BOXEN_SRC_DIR: /Users/${boxen::config::boxen_user}/src
 # - BOXEN_S3_HOST: s3.amazonaws.com
 # - BOXEN_S3_BUCKET: boxen-downloads
-
 export BOXEN_SRC_DIR=$HOME/.boxen-src
 
 cd repo
@@ -57,5 +56,4 @@ cd repo
 # --srcdir DIR                 The directory where repos live.
 # --user USER                  Your local user.
 # --no-color                   Disable colors
-export BOXEN_NO_FDE=yes
 ./script/boxen $1
