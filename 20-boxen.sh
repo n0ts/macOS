@@ -3,8 +3,10 @@
 BOXEN_HOME=/opt/boxen
 OUR_BOXEN=https://github.com/n0ts/our-boxen.git
 
-sudo mkdir -p $BOXEN_HOME
-sudo chown $(whoami):staff $BOXEN_HOME
+if [[ ! -f "$BOXEN_HOME" ]]; then
+  sudo mkdir -p $BOXEN_HOME
+  sudo chown $(whoami):staff $BOXEN_HOME
+fi
 
 cd $BOXEN_HOME
 git clone $OUR_BOXEN repo
@@ -25,6 +27,8 @@ git clone $OUR_BOXEN repo
 export BOXEN_SRC_DIR=$HOME/.boxen-src
 
 cd repo
+
+git pull origin master
 
 #
 # boxen --help
@@ -56,4 +60,4 @@ cd repo
 # --srcdir DIR                 The directory where repos live.
 # --user USER                  Your local user.
 # --no-color                   Disable colors
-./script/boxen $1
+./script/boxen $@
