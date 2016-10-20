@@ -13,12 +13,12 @@ Requirements
 
 
 Before Usage
-----
+-----
 
 1. Clean installing OS X via ONLINE or USB memory.
   - Hold 'C' key during startup
-  - Erase OS X partation (Rename Macintosh HD volume name)
-  - Create bootable OS X installer via USB memory
+  - Erase partation (Rename Macintosh HD volume name)
+  - Create bootable installer via USB memory
   - [Startup key combinations for Mach](https://support.apple.com/en-ap/HT201255)
   -- Show Startup Manager: C Key
 
@@ -27,16 +27,15 @@ Before Usage
   * Software RAID is not support FileVault.
   http://support.apple.com/kb/ht4649
 
-3. Install some applications from App Store, and Upgrade components.
-  - Xcode (*required)
-  etc...
+3. Install Xcode from App Store
 
-4. for El Capitan, SIP partially disables. Enter recovery mode(%-R), run bellow command.
+4. for El Capitan or later, SIP partially disables. Enter recovery mode(%-R), run bellow command.
   ```
 $ csrutil enable --without debug
   ```
 
 5. Reboot
+
 
 Usage
 -----
@@ -79,25 +78,29 @@ $ boxen [projects...]
 Other Manual Configuration
 -----
 
-## OS X's System Preferences
+## OS X System Preferences
 
 ### Mission Controll
-- Spaces x 10
-  - Keyboard shortcut: % + [1..0]
+
+- Spaces x 11
+  - Spaces 1..10: Keyboard shortcut: % + [1..0]
 
 ### Languages & Region
-- Add Japanese and more!
 
-## Dictation & Speect
+- Japanese
 
-- Add system vovice (English & Japanese)
+### Dictation & Speech
+
+- Diction On
+- Language: English, Japanese
 
 ### Accessibility - Audio
 
 - Flash the screen when an alert sound occurs
 
 ### Finder Preferenes
-- Slidebar: FAVORITES [$::boxen_user home directory]
+
+- Slidebar: FAVORITES `$::boxen_user` home directory
 
 ### Set keyboard shortcut
 
@@ -120,19 +123,15 @@ Other Configuration
 -----
 
 - $HOME/.ssh
-- Spaces & Background image
+- Desktop Background
 - Dashboard
-- Dropbox
-- Import preferences
-  - Alfred 2
-    - [Workflows](https://github.com/zenorocha/alfred-workflows)
+- Application preferences
   - 1Password
   - iStat Menus
   - iTerm 2
     - Preferences - Load Preferences from a custom folder on URL
     - ~/Library/Preferences/com.googlecode.iterm2.plist
-- Manual Preferences
-  - Other all applications...
+  - etc...
 
 
 Authors
