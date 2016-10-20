@@ -119,18 +119,34 @@ Other Manual Configuration
   - or copy com.apple.symbolichotkeys.plist to ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 
+3rd Applications
+---
+
+- ATOK
+
+
 Other Configuration
 -----
 
 - $HOME/.ssh
+- Users Login Items
 - Desktop Background
 - Dashboard
-- Application preferences
+- Notificaton Center Widgets
+- Application
+  - Resilio Sync
+  - Dropbox
   - 1Password
   - iStat Menus
-  - iTerm 2
+  - iTerm
     - Preferences - Load Preferences from a custom folder on URL
     - ~/Library/Preferences/com.googlecode.iterm2.plist
+  - Alfred
+  - Bartender
+  - TotalFinder
+  - Firefox
+  - Slack
+  - VMware Fusion
   - etc...
 
 
