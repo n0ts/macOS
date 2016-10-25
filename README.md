@@ -62,17 +62,22 @@ ENTER> GitHub account
   ```
   - --no-fde: Don't require full disk encryption.
 
-4. Quit the Terminal.app, open the iTerm2.app
+4. Install applications from App Store
+  ```
+$ ./30-mas.sh
+  ```
+
+5. Quit the Terminal.app, open the iTerm2.app
   ```
 $ boxen terminal
   ```
 
-5. for Development, if necessary
+6. for Development, if necessary
   ```
 $ boxen [projects...]
   ```
 
-6. Restart the OS X
+7. Restart the OS X
 
 
 Other Manual Configuration
