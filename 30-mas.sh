@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 mas signin $1
 
 readonly apps=(
