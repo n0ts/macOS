@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 git clone https://github.com/teored90/nobootsound
 
 cd nobootsound

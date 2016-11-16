@@ -1,19 +1,16 @@
 #!/bin/bash
 
-mas signin $1
-
 readonly apps=(
 "443987910 1Password"
 "944960179 AnyDo"
 "1037126344 Apple Configurator 2"
 "424164948 Brightness"
-"411246225 Caffeine"
 "417602904 CloudApp"
 "424390742 Compressor"
 "411643860 DaisyDisk"
 "549083868 Display Menu"
 "413857545 Divvy"
-"476237254 Ds Store Remover"
+"1113480556 DotCleaner"
 "406056744 Evernote"
 "424389933 Final Cut Pro"
 "682658836 GarageBand"
@@ -50,7 +47,7 @@ readonly apps=(
 )
 for app in "${apps[@]}"; do
     app_id=$(echo $app | cut -d ' ' -f 1)
-    app_name=$(echo $app | cut -d ' ' -f 2)
-    echo "installing $app_name"
-    mas install $app_id
+    app_name=$(echo $app | cut -d ' ' -f 2-)
+    echo "echo \"install $app_name\""
+    echo "mas install $app_id"
 done

@@ -1,23 +1,25 @@
-OS X
+macOS
 ===================================
-Shell scripts for automated OS X machine setup.
+Shell scripts for automated macOS machine setup.
 
 
 Requirements
 ------------
 
 ### Platforms
+
 - OS X 10.9 Mavericks
 - OS X 10.10 Yosemite
 - OS X 10.11 El Capitan
+- macOS 10.12 Sierra
 
 
 Before Usage
 -----
 
-1. Clean installing OS X via ONLINE or USB memory.
+1. Clean installing macOS via ONLINE or USB memory.
   - Hold 'C' key during startup
-  - Erase partation (Rename Macintosh HD volume name)
+  - Erase partition (Rename Macintosh HD volume name)
   - Create bootable installer via USB memory
   - [Startup key combinations for Mach](https://support.apple.com/en-ap/HT201255)
   -- Show Startup Manager: C Key
@@ -64,7 +66,8 @@ ENTER> GitHub account
 
 4. Install applications from App Store
   ```
-$ ./30-mas.sh
+$ mas signin <Apple ID>
+$ source 30-mas.sh | bash
   ```
 
 5. Quit the Terminal.app, open the iTerm2.app
@@ -77,37 +80,26 @@ $ boxen terminal
 $ boxen [projects...]
   ```
 
-7. Restart the OS X
+7. Restart the macOS
 
 
 Other Manual Configuration
 -----
 
-## OS X System Preferences
+## System Preferences
 
 ### Mission Controll
 
 - Spaces x 11
   - Spaces 1..10: Keyboard shortcut: % + [1..0]
 
-### Languages & Region
+### Keyboard
 
-- Japanese
+- [Fast] Key Repeat
+- [Short] Delay Until Repeat
+- Modifier Keys... Caps Lock Key: ^ Control
 
-### Dictation & Speech
-
-- Diction On
-- Language: English, Japanese
-
-### Accessibility - Audio
-
-- Flash the screen when an alert sound occurs
-
-### Finder Preferenes
-
-- Slidebar: FAVORITES `$::boxen_user` home directory
-
-### Set keyboard shortcut
+#### Keyboard shortcut
 
 - Select next source in input menu (*required reboot)
     ```
@@ -121,38 +113,101 @@ Other Manual Configuration
 <img src="images/key_60.jpg">
 <img src="images/key_61.jpg">
 
-  - or copy com.apple.symbolichotkeys.plist to ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  - or `copy com.apple.symbolichotkeys.plist` to `~/Library/Preferences/com.apple.symbolichotkeys.plist`
+
+### Languages & Region
+
+- Japanese
+
+### Dictation & Speech
+
+- Dictation On
+- Language: English, Japanese
+
+### Accessibility - Audio
+
+- Flash the screen when an alert sound occurs
+
+### Date & Time
+- [OFF] Clock - Show date and time in menu bar
+
+
+## Finder
+
+- Sidebar: FAVORITES `$::boxen_user` home directory
+
+
+## Mail
+
+- General: [OFF] New Messages Sound, Play sounds for other mail actions
+- Junk Mail: [ON] Enable junk mail filtering
+- Composing: [Plain Text] Plain Text
+
+
+## Other
+
+- Energy Saver
+  - [OFF] Show battery status in menu bar
+- Mission Control
+  - Set application per Space
+- Notifications
+  - Applications
+  - Widgets: customize it
+- Desktop Background
+- Dashboard
+- Timemachine
 
 
 3rd Applications
 ---
 
 - ATOK
+  - Disable `ATOK IMIKURU`
+  - Setup Cloud Service
+  - Setup Environment
 
 
-Other Configuration
+Other Applications
 -----
 
-- $HOME/.ssh
-- Users Login Items
-- Desktop Background
-- Dashboard
-- Notificaton Center Widgets
-- Application
-  - Resilio Sync
-  - Dropbox
-  - 1Password
-  - iStat Menus
-  - iTerm
-    - Preferences - Load Preferences from a custom folder on URL
-    - ~/Library/Preferences/com.googlecode.iterm2.plist
-  - Alfred
-  - Bartender
-  - TotalFinder
-  - Firefox
-  - Slack
-  - VMware Fusion
-  - etc...
+- Dropbox
+- Resilio Sync
+- 1Password
+  - Create a New Vault without iCloud Syncing
+  - Preferences
+    - Advanced: [OFF] Verify browser code signature
+    - Sync: [Folder]
+  - Import `n0ts.opvault` (double-click it)
+  - Install Browser Addons (Firefox, Chrome, Safari)
+- iStat Menus
+  - Import Settings...
+- MenuMeters
+  - [OFF] CPU, Disk, Network
+  - [ON] Memory, Show paging activity indicator
+- iTerm
+  - copy `com.googlecode.iterm2.plist` to `~/Library/Preferences/com.googlecode.iterm2.plist`
+- Alfred
+  - Show Alfred Preferences - Advanced - Set sync folder...
+  - [CHANGE] Appearance
+- TotalTerminal
+  - Activation: Option + T
+  - [OFF] Check for updates
+- TotalFinder
+  - Registration
+  - [ALL ON] Dock
+  - [ALL ON] Menus
+  - [ON] Visor, Activation Option + F, Hide on ESC
+  - [ALL ON] Sidebar
+- Bartender
+  - License
+  - [ON] General: Launch Bartender at Login
+  - [Nothing/Hide] Application Menu Items
+- Firefox
+  - Sync
+  - Import Bookmarks
+- SSH
+- GPG2
+- Other all applications
 
 
 Authors

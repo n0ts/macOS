@@ -1,4 +1,6 @@
 #!/bin/bash
+
+set -e
  
 BOXEN_HOME=/opt/boxen
 OUR_BOXEN=https://github.com/n0ts/our-boxen.git

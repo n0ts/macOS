@@ -10,5 +10,3 @@ sudo /usr/bin/xcodebuild -license
 
 # NOTE: xcode-select command is no block
 /usr/bin/xcode-select --install
-
-exit 0
