@@ -117,7 +117,8 @@ Other Manual Configuration
 
 ### Languages & Region
 
-- Japanese
+- Preferred lanauges: Second Japanese
+- [OFF] 24-Hour Time
 
 ### Dictation & Speech
 
