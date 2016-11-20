@@ -48,12 +48,12 @@ Usage
   ```
 $ export HOSTNAME=<MY HOSTNAME>
 $ sudo xcodebuild -license
+* DO NOT INCLUDE HOSTNAME `.local`
   ```
-  * DO NOT INCLUDE HOSTNAME `.local`
 
   ```
-$ git clone https://github.com/n0ts/os-x.git
-$ cd os-x
+$ git clone https://github.com/n0ts/macOS.git
+$ cd macOS
 $ ./setup.sh
   ```
 
@@ -64,9 +64,8 @@ ENTER> GitHub account
   ```
   - --no-fde: Don't require full disk encryption.
 
-4. Install applications from App Store
+4. Open another terminal, Install applications from App Store
   ```
-$ mas signin <Apple ID>
 $ source 30-mas.sh | bash
   ```
 
@@ -120,7 +119,7 @@ Other Manual Configuration
 - Preferred lanauges: Second Japanese
 - [OFF] 24-Hour Time
 
-### Dictation & Speech
+### Keyboard - Dictation
 
 - Dictation On
 - Language: English, Japanese
@@ -156,7 +155,7 @@ Other Manual Configuration
   - Widgets: customize it
 - Desktop Background
 - Dashboard
-- Timemachine
+- Time Machine
 
 
 3rd Applications

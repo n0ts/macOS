@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -z "$HOSTNAME" ]; then
+if [[ -z "$HOSTNAME" ]]; then
   echo "HOSTNAME environment is empty"
   exit 1
 fi
