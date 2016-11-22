@@ -18,6 +18,7 @@ $ sudo spctl --master-disable
 
 - [OFF] Reduce motion
 
+
 ## Finder
 
 ### Advanced
@@ -25,3 +26,10 @@ $ sudo spctl --master-disable
 - [OFF] Show warning before removing from iCloud Drive
 - [ON] Show Remove items from the Trash after 30 days
 - [ON] Keep folders on top when sorting by name
+
+
+## Karabiner-elements
+
+![Simple Modifications](images/karabiner-key.png)
+
+![Key Repeat](images/karabiner-key-repeat.png)
