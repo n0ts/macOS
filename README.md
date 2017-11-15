@@ -30,10 +30,10 @@ Before Usage
 3. Install Xcode from App Store
 
 4. for El Capitan or later, SIP partially disables. Enter recovery mode(%-R), run bellow command.
-  ```
-$ csrutil enable --without debug
-$ reboot
-  ```
+    ```
+    $ csrutil enable --without debug
+    $ reboot
+    ```
 
 
 Usage
@@ -59,7 +59,7 @@ Usage
     $ ./20-boxen.sh [--no-fde]
     ENTER> GitHub account
     ```
-  - --no-fde: Don't require full disk encryption.
+    - --no-fde: Don't require full disk encryption.
 
 4. Open another terminal, Install applications from App Store
     ```
@@ -95,7 +95,7 @@ Other Manual Configuration
 
 #### Keyboard Shortcut
 
-- Select next source in input menu (*required reboot)
+- Select next source in input menu (*Required Reboot)
     ```
   $ open ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
@@ -107,7 +107,7 @@ Other Manual Configuration
     <img src="images/key_60.jpg">
     <img src="images/key_61.jpg">
 
-  - or [copy com.apple.symbolichotkeys.plist](copy com.apple.symbolichotkeys.plist) to `~/Library/Preferences/com.apple.symbolichotkeys.plist`
+  - or [copy com.apple.symbolichotkeys.plist](com.apple.symbolichotkeys.plist) to `~/Library/Preferences/`
 
 ### Languages & Region
 
