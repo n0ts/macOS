@@ -26,7 +26,7 @@ readonly apps=(
 "409201541 Pages"
 "891571917 Plain Text - Remove Text Format"
 "568494494 Pocket"
-"446107677 Screens"
+"1224268771 Screens 4"
 "692867256 Simplenote"
 "425955336 Skitch"
 "405580712 StuffIt Expander"
