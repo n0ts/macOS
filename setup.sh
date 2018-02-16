@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SCRIPTS=(
+  00-lang
   01-hostname
   10-xcode
   11-nobootsound

@@ -11,23 +11,23 @@ Requirements
 - OS X 10.9 Mavericks
 - OS X 10.10 Yosemite
 - OS X 10.11 El Capitan
-- *CURRENT * macOS 10.12 Sierra
+- macOS 10.12 Sierra
+- *CURRENT* macOS 10.13 High Sierra
 
 
 Before Usage
 -----
 
-1. Clean installing macOS via ONLINE or USB memory.
-    - Hold 'C' key during startup
-    - Erase partition (Rename Macintosh HD volume name)
-    - Create bootable installer via USB memory
-    - [Startup key combinations for Mach](https://support.apple.com/en-ap/HT201255)
+1. Create bootable macOS installer to USB memory
+    - [Startup key combinations for Mac](https://support.apple.com/en-ap/HT201255)
 
-2. Enable FileVault. [System Preferences - FileVault - Turn On FileVault...]
-    - Keep the recovery key, Restart it.
+2. Clean installing macOS via ONLINE or USB memory
+    - Hold 'option' key during startup and Select USB memory
+    - Erase partition (Rename `Macintosh HD` volume name)
+
+3. Enable FileVault. [System Preferences - FileVault - Turn On FileVault...]
+    - Keep the recovery key
     - * [Software RAID is not support FileVault](http://support.apple.com/kb/ht4649).
-
-3. Install Xcode from App Store
 
 4. for El Capitan or later, SIP partially disables. Enter recovery mode(%-R), run bellow command.
     ```
@@ -35,6 +35,7 @@ Before Usage
     $ reboot
     ```
 
+5. Install Xcode from App Store
 
 Usage
 -----
@@ -66,17 +67,19 @@ Usage
     $ source 30-mas.sh | bash
     ```
 
-5. Quit the Terminal.app, open the iTerm2.app
+5. Quit the Terminal.app, open the iTerm.app
     ```
     $ boxen terminal
     ```
 
-6. for Development, if necessary
+6. Open System Preferences - General - Allow apps all vendor (only HighSierra)
+
+7. for Development, if necessary
     ```
     $ boxen [projects...]
     ```
 
-7. Restart the macOS
+8. Restart the macOS
 
 
 Other Manual Configuration
@@ -162,47 +165,52 @@ Other Manual Configuration
 - ATOK
   - ATOK IMIKURU: DISABLE
   - Setup Cloud Service
-  - Setup Environment
 
 
 Other Applications
 -----
 
+- SSH: Copy my $HOME/.ssh
+- iTerm
+  - Load preferences from a custom folder or URL: <My preference folder>
 - Dropbox
 - Resilio Sync
 - 1Password
-  - Create a New Vault without iCloud Syncing
+  - Import passwords (.opvault double-click it)
   - Preferences
     - Advanced:
       - Enable 3rd part app integrations: OFF
-    - Sync: My Folder
-  - Import `n0ts.opvault` (double-click it)
-  - Install Browser Addons (Firefox, Chrome, Safari, Opera)
+  - Install Browser Addons for Firefox, Chrome, Safari
+  - And then: `boxen one_password`
 - iStat Menus
+  - Register
   - Import Settings
 - MenuMeters
   - CPU, Disk, Network: OFF
-  - Memory, Show paging activity indicator: ON
-- iTerm
-  - Copy `com.googlecode.iterm2.plist` to `~/Library/Preferences/com.googlecode.iterm2.plist`
+  - Memory: Show paging activity indicator: ON
 - Alfred
-  - Show Alfred Preferences - Advanced - Set sync folder...
-  - Appearance: CHANGE
+  - Activate Powerpack License
+  - Advanced: Syncing set folder
+  - Appearance
 - TotalFinder
   - Registration
   - Dock: ALL ON
   - Menus: ALL ON
-  - Visor, Activation Option + F, Hide on ESC: ON
+  - Visor, Activation Option + F
   - Sidebar: ALL ON
 - Bartender
   - License
   - General:
     - Launch Bartender at Login: ON
     - Application Menu Items: Nothing or Hide
-- Firefox
+  - Configuration Active Menu Bar Items per Application
+- VMware Fusion: Manually run `brew cask install vmware-fusion`
+- Firefox (MultiFirefox)
+  - Create profile
   - Sync
   - Import Bookmarks
-- SSH: Copy my $HOME/.ssh
+- Chrome
+  - Login my google account
 - And Other All Applications
 
 
