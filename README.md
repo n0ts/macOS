@@ -53,8 +53,8 @@ Manual Configuration
 - Copy keyboard shortcut file to  ~/Library/Preferences/
   - Detail configuration is [here](keyboard.md)
     ```
-cp ~/Library/Preferences/com.apple.symbolichotkeys.plist ~/Library/Preferences/com.apple.symbolichotkeys.plist-orig
-cp com.apple.symbolichotkeys.plist ~/Library/Preferences/com.apple.symbolichotkeys.plist
+    cp ~/Library/Preferences/com.apple.symbolichotkeys.plist ~/Library/Preferences/com.apple.symbolichotkeys.plist-orig
+    cp com.apple.symbolichotkeys.plist ~/Library/Preferences/com.apple.symbolichotkeys.plist
     ```
 - Keyboard > Modifier Keys > Caps Lock Key -> ^ Control
 - Dictation
